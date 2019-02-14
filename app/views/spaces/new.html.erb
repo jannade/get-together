@@ -1,19 +1,10 @@
-<%= form_for @space do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
 
-  <%= f.label :location %>:
-  <%= f.text_field :location %><br />
+<h1>Spaces#new</h1>
 
-  <%= f.label :price %>:
-  <%= f.text_field :price %><br />
-
-  <%= f.label :category %>:
-  <%= f.text_field :category %><br />
-
-  <%= f.label :photo %><br>
-  <%= f.file_field :photo %>
-
-  <%= f.submit %>
-<% end %>
-
+<%= simple_form_for(@space) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :category %>
+  <%= f.input :price  %>
+  <%= f.submit "Add your listing", class: "btn btn-primary" %>
+<% end  %>

@@ -1,10 +1,11 @@
 class SpacesController < ApplicationController
+  before_action :find_space, only: [:show, :edit, :update, :destroy]
+
   def index
     @spaces = Space.all
   end
 
   def show
-    @space = Space.find(params[:id])
   end
 
   def new
@@ -25,12 +26,20 @@ class SpacesController < ApplicationController
   end
 
   def update
+    @space.update(space_params)
+    redirect_to mylistings_path
   end
 
   def destroy
+    @space.delete
+    redirect_to mylistings_path
   end
 
   private
+
+  def find_space
+    @space = Space.find(params[:id])
+  end
 
   def space_params
     params.require(:space).permit(:name, :location, :price, :category, :user_id, :photo)

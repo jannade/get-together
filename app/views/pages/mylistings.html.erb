@@ -1,3 +1,14 @@
 <h1>LISTINGS</h1>
 
-<%= @booking %>
+<h2>MY SPACES</h2>
+
+<% @spaces.each do |space| %>
+  <%= space.name %>
+  <% space.bookings.each do |booking| %>
+    <%= booking.date %>
+  <% end %>
+<% end %>
+
+
+
+
