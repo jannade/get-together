@@ -5,9 +5,7 @@ class PagesController < ApplicationController
   def mylistings
     @user = current_user
     @spaces = Space.where(user_id: @user.id)
-    @spaces.each do |space|
-      @bookings = Booking.where(space_id: space.id)
-    end
+    @bookings = @spaces.select { |space| Booking.where(space_id: space.id) }
   end
 
   def mybookings
