@@ -31,3 +31,4 @@ group :development, :test do
 end
 
 gem 'rename'
+gem 'dotenv-rails', groups: [:development, :test]
