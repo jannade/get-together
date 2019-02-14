@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2019_02_14_035259) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
-    t.string "photo"
     t.string "category"
+    t.string "photo"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
