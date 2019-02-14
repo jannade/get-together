@@ -1,4 +1,19 @@
-<h1>Spaces#new</h1>
-<p>Find me in app/views/spaces/new.html.erb</p>
+<%= form_for @space do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
 
-<%= render "form" %>
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <%= f.label :price %>:
+  <%= f.text_field :price %><br />
+
+  <%= f.label :category %>:
+  <%= f.text_field :category %><br />
+
+  <%= f.label :photo %><br>
+  <%= f.file_field :photo %>
+
+  <%= f.submit %>
+<% end %>
+
