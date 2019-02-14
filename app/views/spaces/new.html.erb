@@ -1,4 +1,9 @@
 <h1>Spaces#new</h1>
-<p>Find me in app/views/spaces/new.html.erb</p>
 
-<%= render "form" %>
+<%= simple_form_for(@space) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :category %>
+  <%= f.input :price  %>
+  <%= f.submit "Add your listing", class: "btn btn-primary" %>
+<% end  %>
