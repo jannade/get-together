@@ -31,4 +31,4 @@ group :development, :test do
 end
 
 gem 'rename'
-
+gem 'pundit'
