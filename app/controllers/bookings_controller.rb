@@ -19,10 +19,14 @@ class BookingsController < ApplicationController
     @booking.space = Space.find(params[:space_id])
     @booking.user = current_user
 
+    # raise
+
     if @booking.save
       redirect_to mybookings_path
     else
-      render :new
+     @booking = Booking.new
+     @space = Space.find(params[:space_id])
+     render :new
     end
   end
 
@@ -36,7 +40,6 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-
   end
 
   private
@@ -46,6 +49,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date, :user_id, :space_id)
+    params.require(:booking).permit(:date)
   end
 end
