@@ -2,7 +2,14 @@ class SpacesController < ApplicationController
   before_action :find_space, only: [:show, :edit, :update, :destroy]
 
   def index
-    @spaces = Space.all
+    @spaces = Space.where.not(latitude: nil, longitude: nil)
+
+    @markers = @spaces.map do |space|
+      {
+        lng: space.longitude,
+        lat: space.latitude
+      }
+    end
   end
 
   def show
