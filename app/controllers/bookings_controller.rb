@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :find_booking, only: [:show, :edit, :update, :destroy]
+
   def index
     @bookings = Bookings.all
   end
@@ -25,17 +27,23 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @space = Space.find(params[:space_id])
   end
 
   def update
-  end
-
-  def destroy
-    @booking.delete
+    @booking.update(booking_params)
     redirect_to mybookings_path
   end
 
+  def destroy
+
+  end
+
   private
+
+  def find_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
     params.require(:booking).permit(:date, :user_id, :space_id)
