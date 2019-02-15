@@ -2,10 +2,8 @@
 
 <ul>
   <% @spaces.each do |space| %>
-  <li>
     <%= space.name %>
-    <%= cl_image_tag space.photo, height: 300, width: 400, crop: :fill %>
-  </li>
+    <%= image_tag space.photo.url %>
     <% end %>
 </ul>
 
