@@ -2,5 +2,6 @@
 
 <% @bookings.each do |booking| %>
   <%= booking.date %>
+  <%= link_to 'Edit', edit_space_booking_path(booking.space, booking) %>
 <% end %>
 
