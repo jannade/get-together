@@ -16,15 +16,5 @@ booking2 = Booking.create(date: Date.new(2019,05,06), user: User.first, space: b
 puts 'Created bookings...'
 
 
-# space11 = Space.new(name: "Best garden", location: "Bangkok", user_id: 1, price: 50, category: "pool party")
-# space11.save
-
-# space22 = Space.new(name: "Best loft", location: "Canggu", user_id: 1, price: 50, category: "Dinner party")
-# space22.save
-
-# booking11 = Booking.new(date: Date.new(2019,03,03), user_id: 2 , space: space11)
-# booking11.save
-
-
 
 
