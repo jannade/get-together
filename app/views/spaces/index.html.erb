@@ -1,11 +1,27 @@
 <h1>Spaces#index</h1>
 
-<ul>
-  <% @spaces.each do |space| %>
-    <%= space.name %>
-    <%= image_tag space.photo.url %>
+
+<div class="container text-center">
+  <div class="row">
+    <% @spaces.each do |space| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= link_to space_path(space.id), class: "card-link" do %>
+          <div class="card-trip">
+            <%= image_tag space.photo.url %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= space.name %></h2>
+                <p><%= space.location %></p>
+              </div>
+              <h2 class="card-trip-pricing">$<%= space.price %></h2>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-</ul>
+  </div>
+</div>
+
 
 <div
   id="map"
