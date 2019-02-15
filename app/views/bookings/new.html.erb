@@ -1,6 +1,15 @@
-<h1>Bookings#new</h1>
+<h1>Confirm your booking</h1>
 
-<%= simple_form_for [@space, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.submit "Book Now!", class: "btn btn-primary" %>
-<% end  %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="form-box">
+        <h2>Select your date!</h2>
+        <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :date %>
+          <%= f.submit "Book Now!", class: "btn btn-primary" %>
+        <% end  %>
+      </div>
+    </div>
+  </div>
+</div>
