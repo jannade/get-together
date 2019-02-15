@@ -1,2 +1,16 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1><%= @space.name %></h1>
+
+<ul>
+  <li>
+    <p>Date: <%= @booking.date %></p>
+  </li>
+  <li>
+    <p>Location: <%= @space.location %></p>
+  </li>
+  <li>
+    <p>Category: <%= @space.category %></p>
+  </li>
+  <li>
+    <p>Price: <%= @space.price %></p>
+  </li>
+</ul>
