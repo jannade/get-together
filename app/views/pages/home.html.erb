@@ -1,2 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div>
+  <div class="home-title">
+    <h1>Find the perfect space for your next get togther</h1>
+    <div class="search-form">
+      <div class="main-search">
+        <div class="location-filter">
+          <form>
+            <div>
+              <label for="location"></label>
+              <input type="text" id="location" name="location" placeholder="Enter location">
+            </div>
+          </form>
+        </div>
+        <div class="category-filter">
+          <input list="hosting-plan" type="text" placeholder="category">
+
+          <datalist id="hosting-plan">
+              <option value="small"/>
+              <option value="medium"/>
+              <option value="large"/>
+          </datalist>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
