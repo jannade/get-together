@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+}
+
+.company-text {
+  text-align: center;
+  color: white;
+}
+
+.form input{
+  display: inline;
+}
+
