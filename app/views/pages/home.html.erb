@@ -3,6 +3,13 @@
     <div class="company-text">
       <h1>Find the perfect space for your next Get Together</h1>
     </div>
+    <%= form_tag(spaces_path, method: 'get') do %>
+    <% categories = ["Dinner Party", "Pool Party"] %>
+    <%= select_tag :category, options_for_select(categories)%>
+    <%#= collection_select :category %>
+    <%= text_field_tag :query, params[:query] %>
+    <% end %>
+
     <form class=form>
       <div>
         <label for="location"></label>
