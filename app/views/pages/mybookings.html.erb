@@ -1,14 +1,18 @@
 
 <div class="container">
-  <h1>Bookings</h1>
-
+  <div class="booking-listing-header">
+    <h1>Bookings</h1>
+  </div>
   <% @bookings.each do |booking| %>
     <div class="card-product">
       <%= image_tag booking.space.photo.url %>
       <div class="card-product-infos">
+
         <h2><%= booking.space.name %></h2>
         <p><%= booking.space.location %></p>
-        <%= link_to 'Manage booking', edit_space_booking_path(booking.space, booking) %>
+        <p>Booked for: <%= booking.date %></p>
+        <p>Host: <%= booking.space.user.name %></p>
+        <%= link_to 'Change booking', edit_space_booking_path(booking.space, booking) %>
       </div>
     </div>
   <% end %>
