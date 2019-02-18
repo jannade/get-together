@@ -37,3 +37,4 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem "geocoder"
 gem 'pg_search'
+gem 'pundit'
