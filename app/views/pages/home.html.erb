@@ -3,8 +3,15 @@
     <div class="company-text">
       <h1>Find the perfect space for your next Get Together</h1>
     </div>
-    <form class=form>
-      <div>
+    <%= form_tag(spaces_path, method: 'get') do %>
+    <% categories = ["Dinner Party", "Pool Party", "Cocktail Party", "Movie Night", "Birthday", "Family"] %>
+    <%= select_tag :category, options_for_select(categories)%>
+    <%#= collection_select :category %>
+    <%= text_field_tag :query, params[:query], placeholder: 'Location or Name'%>
+    <%= submit_tag 'Search'%>
+    <% end %>
+
+<!--       <div>
         <label for="location"></label>
         <input type="text" id="location" name="location" placeholder="Enter location">
         <input list="category" type="text" placeholder="category">
@@ -15,13 +22,7 @@
             <option value="Family Gathering"></option>
             <option value="Children Party"></option>
             <option value="School Gathering"></option>
-        </datalist>
-        <%= link_to "Search Now!", spaces_path, class: "btn btn-primary" %>
-      </div>
-    </form>
-  </div>
-  <div class="cards">
-
+        </datalist> -->
   </div>
 </div>
 
