@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  padding-right: 15px;
+  padding-left: 15px;
+  background: white;
+}
+
+.box-header {
+  background: #F0F0F0;
+  margin-left: -15px;
+  border-color: grey;
+  h1 {
+  margin-top: 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  }
+}
