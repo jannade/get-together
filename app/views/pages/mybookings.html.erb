@@ -1,7 +1,22 @@
-<h1>MY BOOKINGS</h1>
 
-<% @bookings.each do |booking| %>
-  <%= booking.date %>
-  <%= link_to 'Edit', edit_space_booking_path(booking.space, booking) %>
-<% end %>
+<div class="container">
+  <div class="booking-listing-header">
+    <h1>Bookings</h1>
+  </div>
+  <% @bookings.each do |booking| %>
+    <div class="card-product">
+      <%= image_tag booking.space.photo.url %>
+      <div class="card-product-infos">
+
+
+        <h2 class="booking-card-title"><%= booking.space.name %></h2>
+        <h4 class="booking-card-location"><%= booking.space.location %></h4>
+        <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= booking.date %></p>
+        <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%= booking.id %></p>
+        <%= link_to 'Edit booking', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
