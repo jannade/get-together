@@ -1,8 +1,17 @@
 
 <div class="main-container">
   <div class="card-container">
+    <div class="search-bar">
+      <%= form_tag(spaces_path, method: 'get') do %>
+      <% categories = ["Dinner Party", "Pool Party", "Cocktail Party", "Movie Night", "Birthday", "Family"] %>
+      <%= select_tag :category, options_for_select(categories)%>
+      <%#= collection_select :category %>
+      <%= text_field_tag :query, params[:query], placeholder: 'Location or Name'%>
+      <%= submit_tag 'Search'%>
+      <% end %>
+    </div>
   <div class="box-header">
-    <h1>Showing all spaces in ...</h1>
+    <h1>Showing all spaces in <%= params[:query] %></h1>
   </div>
   <div class="container-margin">
     <div class="row">
