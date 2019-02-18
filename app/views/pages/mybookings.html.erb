@@ -10,10 +10,10 @@
 
 
         <h2 class="booking-card-title"><%= booking.space.name %></h2>
-        <p class="booking-card-location"><%= booking.space.location %></p>
-        <p class="booking-card-date booking-info">Booked for: <%= booking.date %></p>
-        <p class="booking-card-host booking-info">Host: <%= booking.space.user.name %></p>
-        <%= link_to 'Change booking', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
+        <h4 class="booking-card-location"><%= booking.space.location %></h4>
+        <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= booking.date %></p>
+        <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%= booking.id %></p>
+        <%= link_to 'Edit booking', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
       </div>
     </div>
   <% end %>

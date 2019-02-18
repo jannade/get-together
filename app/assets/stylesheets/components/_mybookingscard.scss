@@ -16,9 +16,13 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
+}
+
+.card-product h4 {
+  font-size: 14px;
 }
 
 .card-product p {
@@ -26,7 +30,7 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: -2px;
 }
 
 .card-product .card-product-infos {
@@ -35,7 +39,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 50%;
+  grid-template-rows: 1fr 1fr 60%;
 }
 
 .booking-card-title {
@@ -64,13 +68,14 @@
   align-self: end;
   justify-content: end;
   text-align: right;
+  font-size: 12px;
 }
 
 .booking-info {
   text-align: center;
   align-self: center;
   background: #F0F0F0;
-  padding: 10px 0px;
+  padding: 20px 0px;
   margin: 0px 20px;
   border-radius: 3px;
 }
