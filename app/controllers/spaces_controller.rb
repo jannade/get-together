@@ -3,9 +3,20 @@ class SpacesController < ApplicationController
   before_action :find_space, only: [:show, :edit, :update, :destroy]
 
   def index
-    @spaces = Space.where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+      sql_query = " \
+        spaces.name @@ :query \
+        OR spaces.location @@ :query \
+        AND spaces.category @@ :category \
+      "
+      @spaces = Space.where(sql_query, category: "%#{params[:category]}%", query: "%#{params[:query]}%")
+    else
+      @spaces = Space.all
+    end
 
-    @markers = @spaces.map do |space|
+    @spaces_markers = Space.where.not(latitude: nil, longitude: nil)
+
+    @markers = @spaces_markers.map do |space|
       {
         lng: space.longitude,
         lat: space.latitude,
@@ -15,6 +26,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+
   end
 
   def new

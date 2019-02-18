@@ -1,5 +1,5 @@
-Space.destroy_all
 Booking.destroy_all
+Space.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
