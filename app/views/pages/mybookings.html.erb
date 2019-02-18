@@ -8,11 +8,12 @@
       <%= image_tag booking.space.photo.url %>
       <div class="card-product-infos">
 
-        <h2><%= booking.space.name %></h2>
-        <p><%= booking.space.location %></p>
-        <p>Booked for: <%= booking.date %></p>
-        <p>Host: <%= booking.space.user.name %></p>
-        <%= link_to 'Change booking', edit_space_booking_path(booking.space, booking) %>
+
+        <h2 class="booking-card-title"><%= booking.space.name %></h2>
+        <p class="booking-card-location"><%= booking.space.location %></p>
+        <p class="booking-card-date booking-info">Booked for: <%= booking.date %></p>
+        <p class="booking-card-host booking-info">Host: <%= booking.space.user.name %></p>
+        <%= link_to 'Change booking', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
       </div>
     </div>
   <% end %>
