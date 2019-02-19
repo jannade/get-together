@@ -2,7 +2,7 @@
   <div class="booking-listing-header">
     <h1>Your listings</h1>
   </div>
-  <% @spaces.each do |space| %>
+  <% @space_bookings.reverse.each do |space| %>
     <div class="card-listing">
       <div class="image-edit-block">
         <%= image_tag space.photo.url, class: "listing-img"%>

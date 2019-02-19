@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def mylistings
     @user = current_user
     @spaces = Space.where(user_id: @user.id)
+    @space_bookings = Space.where(user_id: @user.id).sort_by { |space| space.bookings.count }
     # @bookings = @spaces.select { |space| Booking.where(space_id: space.id) }
   end
 
