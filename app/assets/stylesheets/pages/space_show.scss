@@ -1,10 +1,24 @@
 .icons-container {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 .icon-text-center {
   text-align: center;
   font-size: 13px;
 
+}
+
+.container-sections {
+  display: flex;
+  justify-content: space-around;
+}
+
+.border-table {
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+}
+
+.center-text {
+  text-align: center;
 }

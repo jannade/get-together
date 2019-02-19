@@ -19,7 +19,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'sprockets-rails', '~> 3.2.1'
 
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
