@@ -1,0 +1,43 @@
+<div class="banner" style="background-image: url(<%= image_path @space.photo %>);">
+  <div class="banner-content">
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <h2><%= @space.name %></h2>
+      <p>Location: <%= @space.location %></p>
+      <p>Category: <%= @space.category %></p>
+      <p>Price: <%= @space.price %></p>
+      <hr>
+      <div class="icons-container">
+        <div class="icon-text-center">
+          <i class="fas fa-cocktail fa-2x"></i>
+          <p>Cocktail</p>
+        </div>
+        <div class="icon-text-center">
+          <i class="fas fa-utensils fa-2x"></i>
+          <p>Dining</p>
+        </div>
+        <div class="icon-text-center">
+          <i class="fas fa-child fa-2x"></i>
+          <p>Kid friendly</p>
+        </div>
+        <div class="icon-text-center">
+          <i class="fas fa-user fa-2x"></i>
+          <p>Max 25 Pax</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-box">
+        <h2>Select your date!</h2>
+        <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :date %>
+          <%= f.submit "Book Now!", class: "btn btn-primary" %>
+        <% end  %>
+      </div>
+    </div>
+  </div>
+</div>
