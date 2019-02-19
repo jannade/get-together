@@ -10,11 +10,11 @@ class SpacesController < ApplicationController
         AND spaces.category @@ :category \
       "
       @spaces = Space.where(sql_query, category: "%#{params[:category]}%", query: "%#{params[:query]}%")
+      @spaces_markers = @spaces.where.not(latitude: nil, longitude: nil)
     else
       @spaces = Space.all
+      @spaces_markers = Space.where.not(latitude: nil, longitude: nil)
     end
-
-    @spaces_markers = Space.where.not(latitude: nil, longitude: nil)
 
     @markers = @spaces_markers.map do |space|
       {
