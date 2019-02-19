@@ -95,5 +95,11 @@
   text-align: center;
 }
 
+.bookings-for-listing-container p {
+  text-align: center;
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 4;
+  margin-bottom: 44px;
+}
 
 
