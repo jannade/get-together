@@ -1,14 +1,11 @@
-
 <div class="container">
   <div class="booking-listing-header">
-    <h1>Bookings</h1>
+    <h1>Your bookings</h1>
   </div>
   <% @bookings.each do |booking| %>
     <div class="card-product">
       <%= image_tag booking.space.photo.url %>
       <div class="card-product-infos">
-
-
         <h2 class="booking-card-title"><%= booking.space.name %></h2>
         <h4 class="booking-card-location"><%= booking.space.location %></h4>
         <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= booking.date %></p>
