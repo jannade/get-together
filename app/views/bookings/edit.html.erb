@@ -12,7 +12,7 @@
         <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%=@booking.id %></p>
         <div class="form-box change-date">
           <%= simple_form_for [@space, @booking] do |f| %>
-          <%= f.input :date, label: "Select new date", class: "small-input-form"%>
+          <%= f.input :date, label: "Select new date", class: "small-input-form", valid_class: false %>
           <%= f.submit "Confirm new date", class: "btn btn-primary small-text" %>
           <% end  %>
         </div>
