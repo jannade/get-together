@@ -1,28 +1,94 @@
 <div class="home-title">
   <div class="head" style="background-image: url(<%= image_path 'spacedesign.jpg' %>)">
-    <div class="company-text">
-      <h1>Find the perfect space for your next Get Together</h1>
+    <div class=form-text>
+      <div class="company-text">
+        <h1>Find the perfect space for your next Get Together</h1>
+      </div>
+      <div class=home-form>
+      <%= form_tag(spaces_path, method: 'get') do %>
+      <% categories = ["Dinner Party", "Pool Party", "Cocktail Party", "Movie Night", "Birthday", "Family"] %>
+      <%= select_tag :category, options_for_select(categories)%>
+      <%#= collection_select :category %>
+      <%= text_field_tag :query, params[:query], placeholder: 'Location or Name'%>
+      <%= submit_tag 'Search'%>
+      <% end %>
+      </div>
     </div>
-    <%= form_tag(spaces_path, method: 'get') do %>
-    <% categories = ["Dinner Party", "Pool Party", "Cocktail Party", "Movie Night", "Birthday", "Family"] %>
-    <%= select_tag :category, options_for_select(categories)%>
-    <%#= collection_select :category %>
-    <%= text_field_tag :query, params[:query], placeholder: 'Location or Name'%>
-    <%= submit_tag 'Search'%>
-    <% end %>
-
-<!--       <div>
-        <label for="location"></label>
-        <input type="text" id="location" name="location" placeholder="Enter location">
-        <input list="category" type="text" placeholder="category">
-        <datalist id="category">
-            <option value="Dinner Party"/>
-            <option value="Pool Party"/>
-            <option value="Picnic"/>
-            <option value="Family Gathering"></option>
-            <option value="Children Party"></option>
-            <option value="School Gathering"></option>
-        </datalist> -->
+    </div>
+  </div>
+</div>
+<div class="booking-instruction">
+  <div class="text-center">
+    <h2>How to Book?</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-xs-6">
+      <%= image_tag 'magnifyingglass.png', class: 'instruction-img' %>
+      <div class=text-center>
+        <h2>Find your space</h2>
+        <p>Filter your search to find a space whenever and wherever you are</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <%= image_tag 'calendar.png', class: 'instruction-img' %>
+      <div class="text-center">
+        <h2>Set a date</h2>
+        <p> Set a date to find a space that suits your need</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <%= image_tag 'handshake.png', class: 'instruction-img' %>
+      <div class="text-center">
+        <h2>Make a space</h2>
+        <p>Have a space to rent? Go ahead and list it on our website.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="search-card">
+  <div class=text-center>
+    <h2>Find places for your next event</h2>
+    <h3>We provide, You decide</h3>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'dinnerparty.jpg', class: 'card-img' %>
+        <h3>Dinner Party</h3>
+      </a>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'poolparty.jpg', class: 'card-img' %>
+        <h3>Pool Party</h3>
+      </a>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'cocktailparty.jpg', class: 'card-img' %>
+        <h3>Cocktail Party</h3>
+      </a>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'movienight.jpg', class: 'card-img' %>
+        <h3>Movie Night</h3>
+      </a>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'birthday.jpg', class: 'card-img' %>
+        <h3>Birthday Party</h3>
+      </a>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <a href="">
+        <%= image_tag 'family.jpg', class: 'card-img' %>
+        <h3>Family Gatherings</h3>
+      </a>
+    </div>
+  </div>
   </div>
 </div>
 

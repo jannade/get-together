@@ -1,9 +1,17 @@
 // Specific CSS for your home-page
+div {
+  display: block;
+}
+
+.company-text {
+  margin-top: 150px
+}
+
 .head{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
+  height: 87vh;
 }
 
 .company-text {
@@ -11,7 +19,36 @@
   color: white;
 }
 
-.form input{
-  display: inline;
+.home-form{
+  margin-left: 250px;
 }
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-card {
+  margin-top: 20px;
+}
+
+.card-img {
+  height: 200px;
+  width: 300px;
+}
+
+.booking-instruction{
+  margin-top: 30px;
+}
+
+.text-center {
+  margin: 30px
+}
+
+.instruction-img {
+  margin-left: 110px;
+  height: 100px;
+  width: 100px;
+}
+
 
