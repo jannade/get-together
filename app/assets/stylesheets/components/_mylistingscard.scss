@@ -76,12 +76,16 @@
   grid-column: 1 / span 4;
   background: #F0F0F0;
   margin-bottom: -20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .booking-for-listing-card {
   background: white;
   padding: 5px;
   margin: 10px;
+
 }
 
 
