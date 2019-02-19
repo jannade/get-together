@@ -81,12 +81,14 @@
 }
 
 .change-date {
-  grid-row: 1 / span 3;
-  grid-column: 3 / span 1;
-  font-size: 12px;
-  padding: 20px;
-  text-align: center;
-  padding-top: 30px;
+    grid-row: 1 / span 3;
+    grid-column: 3 / span 1;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 3px;
+    height: 134px;
+    margin-top: 17px;
 }
 
 .small-text {
