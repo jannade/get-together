@@ -13,6 +13,9 @@
         <h4 class="listing-card-location"><%= space.location %></h4>
         <h4 class="listing-card-bookings">Upcoming bookings</h4>
         <div class="bookings-for-listing-container">
+          <% if space.bookings.empty? %>
+            <p>Sorry, you don't have any bookings for this listing yet</p>
+          <% end  %>
           <% space.bookings.each do |booking| %>
             <div class="booking-for-listing-card">
               <p><strong>BOOKED ON:</strong></br> <%= booking.date %></p>
