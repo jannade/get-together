@@ -11,7 +11,12 @@
 
       <!-- Links when logged in -->
       <%= link_to "List Your Space", new_space_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "My Bookings", mybookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% if current_user.spaces.present? %>
+        <%= link_to "My Listings", mylistings_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end  %>
+      <% if current_user.bookings.present? %>
+        <%= link_to "My Bookings", mybookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
