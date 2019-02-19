@@ -1,14 +1,29 @@
-<h1>LISTINGS</h1>
-
-<h2>MY SPACES</h2>
-
-<% @spaces.each do |space| %>
-  <%= space.name %>
-  <% space.bookings.each do |booking| %>
-    <%= booking.date %>
+<div class="container">
+  <div class="booking-listing-header">
+    <h1>Your listings</h1>
+  </div>
+  <% @spaces.each do |space| %>
+    <div class="card-listing">
+      <div class="image-edit-block">
+        <%= image_tag space.photo.url, class: "listing-img"%>
+        <%= link_to 'Edit listing', edit_space_path(space.id), class: "listing-card-button"%>
+      </div>
+      <div class="card-product-listings">
+        <h2 class="listing-card-title"><%= space.name %></h2>
+        <h4 class="listing-card-location"><%= space.location %></h4>
+        <h4 class="listing-card-bookings">Upcoming bookings</h4>
+        <div class="bookings-for-listing-container">
+          <% @bookings.each do |booking| %>
+            <div class="booking-for-listing-card">
+              <p><%= booking.date %></p>
+            </div>
+          <% end  %>
+        </div>
+      </div>
+    </div>
   <% end %>
-  <%= link_to 'Edit', edit_space_path(space) %>
-<% end %>
+</div>
+
 
 
 

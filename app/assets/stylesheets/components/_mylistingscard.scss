@@ -1,0 +1,88 @@
+.card-listing {
+  overflow: hidden;
+  height: 250px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.card-listing img {
+  height: 200px;
+  width: 260px;
+  object-fit: cover;
+  margin-top: -20px;
+}
+
+.image-edit-block {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+
+.card-listing h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-listing h4 {
+  font-size: 14px;
+}
+
+.card-listing p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: -2px;
+}
+
+.card-listing .card-product-listings {
+  padding: 16px;
+  flex-grow: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 60%;
+}
+
+.listing-card-title {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.listing-card-location {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.listing-card-button {
+  grid-row: 1 / span 1;
+  grid-column: 4 / span 1;
+  font-size: 12px;
+  text-align: center;
+}
+
+.listing-card-bookings {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.bookings-for-listing-container {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 4;
+  background: #F0F0F0;
+  margin-bottom: -20px;
+}
+
+.booking-for-listing-card {
+  background: white;
+  padding: 5px;
+  margin: 10px;
+}
+
+
+
