@@ -1,19 +1,52 @@
+<div class="banner" style="background-image: url(<%= image_path @space.photo %>);">
+  <div class="banner-content">
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 center-text">
+      <h2><%= @space.name %></h2>
+      <br>
+      <div class="container-sections">
+        <div class="border-table">
+          <p><strong>Location</strong></p> <hr> <br>
 
-<h1><%= @space.name %></h1>
+          <p><%= @space.location %></p>
+        </div>
+        <div class="border-table">
+          <p><strong>Price</strong>   <hr><br>
+            <%= @space.price %></p>
+          </div>
+          <div class="border-table">
+            <p><strong>Category</strong> <hr> </p> <br>
+            <div class="icons-container">
+              <div class="icon-text-center">
+                <i class="fas fa-cocktail fa-2x"></i>
+                <p>Cocktail</p>
+              </div>
+              <div class="icon-text-center">
+                <i class="fas fa-utensils fa-2x"></i>
+                <p>Dining</p>
+              </div>
+              <div class="icon-text-center">
+                <i class="fas fa-child fa-2x"></i>
+                <p>Kid friendly</p>
+              </div>
+            </div>
 
-<ul>
-  <li>
-    <p>Location: <%= @space.location %></p>
-  </li>
-  <li>
-    <p>Category: <%= @space.category %></p>
-  </li>
-  <li>
-    <p>Price: <%= @space.price %></p>
-  </li>
-</ul>
+          </div>
+        </div>
 
-<%= cl_image_tag @space.photo, height: 300, width: 400, crop: :fill %>
-
-<%= link_to "Book this space!", new_space_booking_path(@space.id), class: "btn btn-primary"%>
-
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-box">
+          <h2>Select your date!</h2>
+          <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :date %>
+          <%= f.submit "Book Now!", class: "btn btn-primary" %>
+          <% end  %>
+        </div>
+      </div>
+    </div>
+  </div>
