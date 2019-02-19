@@ -13,7 +13,7 @@
         <h4 class="booking-card-location"><%= booking.space.location %></h4>
         <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= booking.date %></p>
         <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%= booking.id %></p>
-        <%= link_to 'Edit booking', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
+        <%= link_to 'Change date', edit_space_booking_path(booking.space, booking), class: "booking-card-button"%>
       </div>
     </div>
   <% end %>
