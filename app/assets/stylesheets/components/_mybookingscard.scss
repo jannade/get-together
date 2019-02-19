@@ -1,0 +1,98 @@
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 260px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.card-product h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product h4 {
+  font-size: 14px;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: -2px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  flex-grow: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 60%;
+}
+
+.booking-card-title {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.booking-card-location {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.booking-card-date {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.booking-card-host {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.booking-card-button {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+  align-self: end;
+  justify-content: end;
+  text-align: right;
+  font-size: 12px;
+}
+
+.booking-info {
+  text-align: center;
+  align-self: center;
+  background: #F0F0F0;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  border-radius: 3px;
+}
+
+.change-date {
+  grid-row: 1 / span 3;
+  grid-column: 3 / span 1;
+  font-size: 12px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.small-input-form {
+
+}

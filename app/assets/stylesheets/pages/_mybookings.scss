@@ -1,0 +1,14 @@
+.booking-listing-header {
+  margin-left: 20px;
+  h1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between
+}
