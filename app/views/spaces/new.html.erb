@@ -9,30 +9,21 @@
   </div>
 </div>
 
-
-<!-- <div class="banner-how">
-  <div class="container2">
-    <h3>How it works!</h3>
-    <br>
-
-  </div>
-</div> -->
-
-
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-md-6 offset-md-3">
       <div class="form-box">
         <h2>List your space</h2>
         <%= simple_form_for(@space) do |f| %>
-          <%= f.input :name, label: 'Space name' %>
-          <%= f.input :location, label: 'Address' %>
-          <%= f.input :category, label: 'Space type' %>
-          <%= f.input :price %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "Add your listing", class: "btn btn-primary" %>
+          <div class="form-inputs">
+            <%= f.input :name, label: 'Space name' %>
+            <%= f.input :location, label: 'Address' %>
+            <%= f.input :category, label: 'Space type' %>
+            <%= f.input :price %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Add your listing", class: "btn btn-primary" %>
+          </div>
         <% end  %>
       </div>
     </div>
