@@ -16,7 +16,7 @@
           <% space.bookings.each do |booking| %>
             <div class="booking-for-listing-card">
               <%= booking.date %>
-              <%= link_to "Manage booking", edit_space_booking_path(space, booking)%>
+              <%= link_to "Manage booking", edit_space_booking_path(space, booking), class: %>
             </div>
           <% end  %>
         </div>
