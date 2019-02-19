@@ -1,21 +1,21 @@
-
-<div class="container">
-  <div class="booking-listing-header">
-    <h1>Edit your booking</h1>
-  </div>
-  <div class="card-product">
-    <%= image_tag @space.photo.url %>
-    <div class="card-product-infos">
-      <h2 class="booking-card-title"><%= @space.name %></h2>
-      <h4 class="booking-card-location"><%= @space.location %></h4>
-      <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= @booking.date %></p>
-      <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%=@booking.id %></p>
-      <div class="form-box change-date">
-      <%= simple_form_for [@space, @booking] do |f| %>
-      <%= f.input :date, label: "Select new date", class: "small-input-form"%>
-      <%= f.submit "Confirm new date", class: "btn btn-primary small-text" %>
-      <% end  %>
+<div class="flex-wrapper">
+  <div class="container">
+    <div class="booking-listing-header">
+      <h1>Edit your booking</h1>
     </div>
-
+    <div class="card-product">
+      <%= image_tag @space.photo.url %>
+      <div class="card-product-infos">
+        <h2 class="booking-card-title"><%= @space.name %></h2>
+        <h4 class="booking-card-location"><%= @space.location %></h4>
+        <p class="booking-card-date booking-info"><strong>BOOKED DATE</strong> </br> <%= @booking.date %></p>
+        <p class="booking-card-host booking-info"><strong>BOOKING ID</strong> </br> REFX<%=@booking.id %></p>
+        <div class="form-box change-date">
+          <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :date, label: "Select new date", class: "small-input-form"%>
+          <%= f.submit "Confirm new date", class: "btn btn-primary small-text" %>
+          <% end  %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
